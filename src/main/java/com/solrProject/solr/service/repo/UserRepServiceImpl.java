@@ -1,4 +1,58 @@
 package com.solrProject.solr.service.repo;
 
-public class UserRepServiceImpl {
+import com.solrProject.solr.model.User;
+import com.solrProject.solr.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+@Slf4j
+public class UserRepServiceImpl implements UserRepService {
+
+    @Autowired
+    private UserRepository repository;
+
+
+    public List<User> getAll() {
+        Iterable<User> all = repository.findAll();
+        List<User> users = new ArrayList<>();
+        for(User user: all){
+            users.add(user);
+        }
+        return users;
+    }
+
+    public boolean save(User user) {
+        if(user != null && user.getId() != null){
+            User save = repository.save(user);
+            return save != null;
+        }
+        return false;
+    }
+
+    public boolean update(User user){
+        if(user != null){
+            Optional<User> byId = repository.findById(user.getId());
+            if(byId.isPresent()){
+                User save = repository.save(user);
+                return save != null;
+            }
+        }
+        return false;
+    }
+
+    public boolean delete(User user){
+        if(user != null){
+            repository.delete(user);
+            return true;
+        }
+        return false;
+    }
+
+    public
 }

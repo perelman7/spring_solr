@@ -16,7 +16,7 @@ public class SwaggerConfig {
     public Docket apiDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.s7.mdm.upload"))
+                .apis(RequestHandlerSelectors.basePackage("com.solrProject.solr.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

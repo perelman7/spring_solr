@@ -3,8 +3,8 @@ package com.solrProject.solr.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import java.io.Serializable;
@@ -16,13 +16,13 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     @Id
-    @Field("ID")
+    @Indexed("ID")
     private String id;
-    @Field("NAME")
+    @Indexed(name = "NAME", type = "string")
     private String name;
-    @Field("SURNAME")
+    @Indexed(name = "SURNAME", type = "string")
     private String surname;
-    @Field("AGE")
-    private int age;
+    @Indexed(name = "AGE", type = "string")
+    private String age;
 
 }
