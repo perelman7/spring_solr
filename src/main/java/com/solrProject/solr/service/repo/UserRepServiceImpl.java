@@ -17,7 +17,7 @@ public class UserRepServiceImpl implements UserRepService {
     @Autowired
     private UserRepository repository;
 
-
+    @Override
     public List<User> getAll() {
         Iterable<User> all = repository.findAll();
         List<User> users = new ArrayList<>();
@@ -27,6 +27,7 @@ public class UserRepServiceImpl implements UserRepService {
         return users;
     }
 
+    @Override
     public boolean save(User user) {
         if(user != null && user.getId() != null){
             User save = repository.save(user);
@@ -35,6 +36,7 @@ public class UserRepServiceImpl implements UserRepService {
         return false;
     }
 
+    @Override
     public boolean update(User user){
         if(user != null){
             Optional<User> byId = repository.findById(user.getId());
@@ -46,6 +48,7 @@ public class UserRepServiceImpl implements UserRepService {
         return false;
     }
 
+    @Override
     public boolean delete(User user){
         if(user != null){
             repository.delete(user);
@@ -54,5 +57,14 @@ public class UserRepServiceImpl implements UserRepService {
         return false;
     }
 
-    public
+    @Override
+    public User findById(String id){
+        if(id != null && !id.isEmpty()){
+            Optional<User> byId = repository.findById(id);
+            if (byId.isPresent()){
+                return byId.get();
+            }
+        }
+        return null;
+    }
 }

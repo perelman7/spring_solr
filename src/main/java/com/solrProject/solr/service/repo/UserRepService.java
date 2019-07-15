@@ -10,5 +10,5 @@ public interface UserRepService {
     boolean save(User user);
     boolean update(User user);
     boolean delete(User user);
-
+    User findById(String id);
 }
