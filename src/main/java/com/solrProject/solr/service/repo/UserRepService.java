@@ -10,5 +10,6 @@ public interface UserRepService {
     boolean save(User user);
     boolean update(User user);
     boolean delete(User user);
-    User findById(String id);
+    List<User> findById(String id);
+    List<User> findByNameOrSurname(String name);
 }

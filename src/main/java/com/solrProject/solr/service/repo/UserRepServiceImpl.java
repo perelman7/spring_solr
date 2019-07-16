@@ -58,12 +58,18 @@ public class UserRepServiceImpl implements UserRepService {
     }
 
     @Override
-    public User findById(String id){
+    public List<User> findById(String id){
         if(id != null && !id.isEmpty()){
-            Optional<User> byId = repository.findById(id);
-            if (byId.isPresent()){
-                return byId.get();
-            }
+            List<User> byId = repository.getById(id);
+            return byId;
+        }
+        return null;
+    }
+
+    @Override
+    public List<User> findByNameOrSurname(String name){
+        if(name != null && !name.isEmpty()){
+            return repository.getByNameOrSurname(name);
         }
         return null;
     }

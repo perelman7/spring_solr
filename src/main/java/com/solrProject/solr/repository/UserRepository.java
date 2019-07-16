@@ -10,6 +10,9 @@ import java.util.List;
 @Repository
 public interface UserRepository extends SolrCrudRepository<User, String> {
 
-    @Query(value = "ID:?0")
+    @Query(name = "users.findById")
     List<User> getById(String id);
+
+    @Query(name = "users.findByNameOrSurname")
+    List<User> getByNameOrSurname(String name);
 }

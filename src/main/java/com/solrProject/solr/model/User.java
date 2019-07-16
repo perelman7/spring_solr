@@ -22,7 +22,7 @@ public class User implements Serializable {
     private String name;
     @Indexed(name = "SURNAME", type = "string")
     private String surname;
-    @Indexed(name = "AGE", type = "string")
-    private String age;
+    @Indexed(name = "AGE", type = "integer")
+    private Integer age;
 
 }

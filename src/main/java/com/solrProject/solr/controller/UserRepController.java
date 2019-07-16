@@ -26,8 +26,14 @@ public class UserRepController {
 
     @GetMapping("/{id}")
     public ResponseEntity getById(@PathVariable String id){
-        User byId = userRepService.findById(id);
+        List<User> byId = userRepService.findById(id);
         return new ResponseEntity<>(byId, HttpStatus.OK);
+    }
+
+    @GetMapping("/byName/{name}")
+    public ResponseEntity getName(@PathVariable String name){
+        List<User> byNameOrSurname = userRepService.findByNameOrSurname(name);
+        return new ResponseEntity<>(byNameOrSurname, HttpStatus.OK);
     }
 
     @PostMapping
