@@ -20,7 +20,8 @@ public class SolrConfig {
 
     @Bean
     public SolrOperations solrTemplate() {
-        return new SolrTemplate(solrServerFactoryBean());
+        SolrTemplate solrTemplate = new SolrTemplate(solrServerFactoryBean());
+        return solrTemplate;
     }
 
 }

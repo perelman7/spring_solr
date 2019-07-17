@@ -14,4 +14,5 @@ public interface UserTemplService {
     StatsPage<User> stat();
     Page<User> filtered(String value);
     Page<User> facet();
+    Page<User> join();
 }

@@ -51,4 +51,10 @@ public class UserTemplController {
         Page<User> filtered = userTemplService.filtered(name);
         return new ResponseEntity<>(filtered, HttpStatus.OK);
     }
+
+    @GetMapping("/join")
+    public ResponseEntity join(){
+        Page<User> join = userTemplService.join();
+        return new ResponseEntity<>(join, HttpStatus.OK);
+    }
 }

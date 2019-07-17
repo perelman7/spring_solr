@@ -68,5 +68,13 @@ public class UserTemplServiceImpl implements UserTemplService {
         return users;
     }
 
+    @Override
+    public Page<User> join(){
+        SimpleQuery query = new SimpleQuery(new SimpleStringCriteria("*:*"));
+        query.setJoin(Join.from("AGE").to("id"));
+        Page<User> users = solrTemplate.query("users", query, User.class);
+        return users;
+    }
+
 
 }
