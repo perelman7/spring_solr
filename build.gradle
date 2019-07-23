@@ -20,16 +20,25 @@ repositories {
 }
 
 dependencies {
+
+	//MAIN
 	compile 'org.springframework.boot:spring-boot-starter'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.1.6.RELEASE', ext: 'pom'
 
+	//WEB
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//compile 'org.springframework.boot:spring-boot-starter-webflux'
+	
+	//SOLR
 	compile 'org.springframework.boot:spring-boot-starter-data-solr'
 	compile 'org.apache.solr:solr-solrj'
 
-
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+	//LOMBOK
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	
+	//SWAGGER
 	compile 'io.springfox:springfox-swagger2:2.9.2'
 	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+
 }

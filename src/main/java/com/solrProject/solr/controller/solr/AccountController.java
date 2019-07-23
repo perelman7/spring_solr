@@ -1,4 +1,4 @@
-package com.solrProject.solr.controller;
+package com.solrProject.solr.controller.solr;
 
 import com.solrProject.solr.model.Account;
 import com.solrProject.solr.service.account.AccountService;
