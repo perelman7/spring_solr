@@ -1,6 +1,6 @@
-package com.solrProject.solr.repository;
+package com.solrProject.solr.repository.solr;
 
-import com.solrProject.solr.model.User;
+import com.solrProject.solr.model.solr.User;
 import org.springframework.data.solr.repository.Query;
 import org.springframework.data.solr.repository.SolrCrudRepository;
 import org.springframework.stereotype.Repository;

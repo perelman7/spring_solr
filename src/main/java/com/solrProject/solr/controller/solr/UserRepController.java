@@ -1,7 +1,7 @@
 package com.solrProject.solr.controller.solr;
 
-import com.solrProject.solr.model.User;
-import com.solrProject.solr.service.repo.UserRepService;
+import com.solrProject.solr.model.solr.User;
+import com.solrProject.solr.service.repoUser.UserRepService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/repo")
+@RequestMapping("/repoUser")
 @Slf4j
 public class UserRepController {
 

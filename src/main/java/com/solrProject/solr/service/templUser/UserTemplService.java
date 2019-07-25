@@ -1,6 +1,6 @@
-package com.solrProject.solr.service.templ;
+package com.solrProject.solr.service.templUser;
 
-import com.solrProject.solr.model.User;
+import com.solrProject.solr.model.solr.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.solr.core.query.result.HighlightPage;
 import org.springframework.data.solr.core.query.result.StatsPage;

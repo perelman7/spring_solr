@@ -1,6 +1,6 @@
 package com.solrProject.solr.controller.elastic;
 
-import com.solrProject.solr.model.Article;
+import com.solrProject.solr.model.elastic.Article;
 import com.solrProject.solr.service.elastic.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

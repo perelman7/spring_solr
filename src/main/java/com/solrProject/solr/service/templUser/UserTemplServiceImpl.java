@@ -1,12 +1,11 @@
-package com.solrProject.solr.service.templ;
+package com.solrProject.solr.service.templUser;
 
-import com.solrProject.solr.model.User;
+import com.solrProject.solr.model.solr.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.solr.core.SolrOperations;
 import org.springframework.data.solr.core.query.*;
-import org.springframework.data.solr.core.query.result.HighlightEntry;
 import org.springframework.data.solr.core.query.result.HighlightPage;
 import org.springframework.data.solr.core.query.result.StatsPage;
 import org.springframework.stereotype.Service;

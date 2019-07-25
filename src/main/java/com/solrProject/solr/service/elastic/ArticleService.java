@@ -1,6 +1,6 @@
 package com.solrProject.solr.service.elastic;
 
-import com.solrProject.solr.model.Article;
+import com.solrProject.solr.model.elastic.Article;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.solrProject.solr.service.repo;
+package com.solrProject.solr.service.repoUser;
 
-import com.solrProject.solr.model.User;
+import com.solrProject.solr.model.solr.User;
 
 import java.util.List;
 

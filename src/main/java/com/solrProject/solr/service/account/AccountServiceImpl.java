@@ -1,7 +1,7 @@
 package com.solrProject.solr.service.account;
 
-import com.solrProject.solr.model.Account;
-import com.solrProject.solr.repository.AccountRepository;
+import com.solrProject.solr.model.solr.Account;
+import com.solrProject.solr.repository.solr.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

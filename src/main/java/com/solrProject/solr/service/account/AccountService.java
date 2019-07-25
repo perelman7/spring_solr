@@ -1,6 +1,6 @@
 package com.solrProject.solr.service.account;
 
-import com.solrProject.solr.model.Account;
+import com.solrProject.solr.model.solr.Account;
 
 import java.util.List;
 

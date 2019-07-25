@@ -1,30 +1,25 @@
-package com.solrProject.solr.model;
+package com.solrProject.solr.model.solr;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
-import java.io.Serializable;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@SolrDocument(collection = "account")
-public class Account implements Serializable {
+@SolrDocument(collection = "book")
+public class Book {
 
     @Id
-    @Indexed("id")
-    @Field
+    @Indexed(name = "id", type = "string")
     private String id;
 
-    @Indexed(name = "name", type = "string")
-    @Field
+    @Indexed(name = "name", type = "text_general")
     private String name;
 
-    @Indexed(name = "my_number")
-    private MyNumber number;
+    @Indexed(name = "description", type = "text_general")
+    private String description;
 }

@@ -1,8 +1,9 @@
-package com.solrProject.solr.model;
+package com.solrProject.solr.model.solr;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
@@ -12,17 +13,18 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@SolrDocument(collection = "users")
-public class User implements Serializable {
+@SolrDocument(collection = "account")
+public class Account implements Serializable {
 
     @Id
-    @Indexed("ID")
+    @Indexed("id")
+    @Field
     private String id;
-    @Indexed(name = "NAME", type = "string")
-    private String name;
-    @Indexed(name = "SURNAME", type = "string")
-    private String surname;
-    @Indexed(name = "AGE", type = "integer")
-    private Integer age;
 
+    @Indexed(name = "name", type = "string")
+    @Field
+    private String name;
+
+    @Indexed(name = "my_number")
+    private MyNumber number;
 }

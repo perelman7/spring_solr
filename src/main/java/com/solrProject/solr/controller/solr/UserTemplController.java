@@ -1,7 +1,7 @@
 package com.solrProject.solr.controller.solr;
 
-import com.solrProject.solr.model.User;
-import com.solrProject.solr.service.templ.UserTemplService;
+import com.solrProject.solr.model.solr.User;
+import com.solrProject.solr.service.templUser.UserTemplService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.solr.core.query.result.HighlightPage;

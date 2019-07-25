@@ -2,7 +2,7 @@ package com.solrProject.solr.service.elastic;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.solrProject.solr.model.Article;
+import com.solrProject.solr.model.elastic.Article;
 import com.solrProject.solr.repository.elastic.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

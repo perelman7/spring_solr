@@ -1,6 +1,6 @@
 package com.solrProject.solr.repository.elastic;
 
-import com.solrProject.solr.model.Article;
+import com.solrProject.solr.model.elastic.Article;
 import org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.solrProject.solr.service.repo;
+package com.solrProject.solr.service.repoUser;
 
-import com.solrProject.solr.model.User;
-import com.solrProject.solr.repository.UserRepository;
+import com.solrProject.solr.model.solr.User;
+import com.solrProject.solr.repository.solr.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

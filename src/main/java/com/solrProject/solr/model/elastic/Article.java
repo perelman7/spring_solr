@@ -1,4 +1,4 @@
-package com.solrProject.solr.model;
+package com.solrProject.solr.model.elastic;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

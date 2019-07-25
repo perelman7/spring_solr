@@ -1,6 +1,6 @@
 package com.solrProject.solr.controller.solr;
 
-import com.solrProject.solr.model.Account;
+import com.solrProject.solr.model.solr.Account;
 import com.solrProject.solr.service.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
