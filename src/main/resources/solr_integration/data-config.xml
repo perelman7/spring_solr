@@ -1,0 +1,12 @@
+<dataConfig>
+    <dataSource  type="JdbcDataSource" driver="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/Adventureworks" user="postgres" password="postgres" />
+    <document >
+        <entity name="persons"  pk="businessentityid" query="SELECT * from person.person">
+
+            <field column="businessentityid" name="id"/>
+            <field column="firstname" name="firstname"/>
+            <field column="lastname" name="lastname"/>
+        </entity>
+
+    </document>
+</dataConfig>

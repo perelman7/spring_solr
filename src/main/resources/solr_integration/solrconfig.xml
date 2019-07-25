@@ -1,0 +1,10 @@
+<!--Add libraries -->
+<lib dir="${solr.install.dir:../../../..}/contrib/dataimporthandler/lib" regex=".*\.jar" />
+<lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-dataimporthandler-.*\.jar" />
+
+<!-- Add model for handler (file data-config.xml should be into the same folder where config file)-->
+<requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+        <str name="config">data-config.xml</str>
+    </lst>
+</requestHandler>
