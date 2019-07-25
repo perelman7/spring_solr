@@ -10,7 +10,7 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@SolrDocument(collection = "book")
+@SolrDocument(collection = "books")
 public class Book {
 
     @Id
