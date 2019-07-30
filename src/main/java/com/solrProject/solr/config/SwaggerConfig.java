@@ -17,7 +17,6 @@ import springfox.documentation.swagger.web.SecurityConfiguration;
 import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(metaInfo())
                 .securitySchemes(Collections.singletonList(apiKey()))
-                .securityContexts(Arrays.asList(securityContext()));
+                .securityContexts(Collections.singletonList(securityContext()));
     }
 
     private ApiKey apiKey() {
@@ -51,11 +50,12 @@ public class SwaggerConfig {
                 .forPaths(PathSelectors.any())
                 .build();
     }
+
     private List<SecurityReference> defaultAuth() {
         AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
-        return Arrays.asList(new SecurityReference("Authorization", authorizationScopes));
+        return Collections.singletonList(new SecurityReference("Authorization", authorizationScopes));
     }
 
     @Bean
@@ -73,7 +73,7 @@ public class SwaggerConfig {
 
     private ApiInfo metaInfo() {
 
-        ApiInfo apiInfo = new ApiInfo(
+        return new ApiInfo(
                 "Solr Apache Tool",
                 "Test project with ElasticSearch, Solr Apache, Spring Security",
                 "1.0",
@@ -82,7 +82,5 @@ public class SwaggerConfig {
                 "Apache License Version 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0"
         );
-
-        return apiInfo;
     }
 }
