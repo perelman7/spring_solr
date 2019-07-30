@@ -23,37 +23,37 @@ public class UserTemplController {
     private UserTemplService userTemplService;
 
     @GetMapping("/all")
-    public ResponseEntity getAll(){
+    public ResponseEntity getAll() {
         List<User> all = userTemplService.getAll();
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
 
     @GetMapping("/hightlight/{name}")
-    public ResponseEntity hightlight(@PathVariable String name){
+    public ResponseEntity hightlight(@PathVariable String name) {
         HighlightPage<User> highlighting = userTemplService.highlighting(name);
         return new ResponseEntity<>(highlighting, HttpStatus.OK);
     }
 
     @GetMapping("/stat")
-    public ResponseEntity stat(){
+    public ResponseEntity stat() {
         StatsPage<User> stat = userTemplService.stat();
         return new ResponseEntity<>(stat, HttpStatus.OK);
     }
 
     @GetMapping("/facet")
-    public ResponseEntity facet(){
+    public ResponseEntity facet() {
         Page<User> facet = userTemplService.facet();
         return new ResponseEntity<>(facet, HttpStatus.OK);
     }
 
     @GetMapping("/filter/{name}")
-    public ResponseEntity filter(@PathVariable String name){
+    public ResponseEntity filter(@PathVariable String name) {
         Page<User> filtered = userTemplService.filtered(name);
         return new ResponseEntity<>(filtered, HttpStatus.OK);
     }
 
     @GetMapping("/join")
-    public ResponseEntity join(){
+    public ResponseEntity join() {
         Page<User> join = userTemplService.join();
         return new ResponseEntity<>(join, HttpStatus.OK);
     }

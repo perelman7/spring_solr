@@ -6,6 +6,7 @@ import com.solrProject.solr.security.jwt.util.JwtTokenProvider;
 import com.solrProject.solr.security.model.Role;
 import com.solrProject.solr.security.model.User;
 import com.solrProject.solr.security.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/auth")
+@Api(description = "Authorization controller", tags = "Auth")
 public class AuthenticationRestController {
 
     @Autowired

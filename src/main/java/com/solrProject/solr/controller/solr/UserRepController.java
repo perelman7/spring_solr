@@ -19,37 +19,37 @@ public class UserRepController {
     private UserRepService userRepService;
 
     @GetMapping
-    public ResponseEntity getAll(){
+    public ResponseEntity getAll() {
         List<User> all = userRepService.getAll();
         return new ResponseEntity<>(all, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity getById(@PathVariable String id){
+    public ResponseEntity getById(@PathVariable String id) {
         List<User> byId = userRepService.findById(id);
         return new ResponseEntity<>(byId, HttpStatus.OK);
     }
 
     @GetMapping("/byName/{name}")
-    public ResponseEntity getName(@PathVariable String name){
+    public ResponseEntity getName(@PathVariable String name) {
         List<User> byNameOrSurname = userRepService.findByNameOrSurname(name);
         return new ResponseEntity<>(byNameOrSurname, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity save(@RequestBody User user){
+    public ResponseEntity save(@RequestBody User user) {
         boolean save = userRepService.save(user);
         return save ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
     @PutMapping
-    public ResponseEntity update(@RequestBody User user){
+    public ResponseEntity update(@RequestBody User user) {
         boolean update = userRepService.update(user);
         return update ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
     @DeleteMapping
-    public ResponseEntity delete(@RequestBody User user){
+    public ResponseEntity delete(@RequestBody User user) {
         boolean delete = userRepService.delete(user);
         return delete ? new ResponseEntity(HttpStatus.OK) : new ResponseEntity(HttpStatus.BAD_REQUEST);
     }

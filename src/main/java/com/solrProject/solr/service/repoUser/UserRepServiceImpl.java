@@ -4,6 +4,7 @@ import com.solrProject.solr.model.solr.User;
 import com.solrProject.solr.repository.solr.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class UserRepServiceImpl implements UserRepService {
     }
 
     @Override
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public boolean save(User user) {
         if(user != null && user.getId() != null){
             User save = repository.save(user);
