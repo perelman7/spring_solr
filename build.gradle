@@ -47,4 +47,10 @@ dependencies {
 	compile "org.springframework.boot:spring-boot-starter-security"
 	compile 'org.springframework.security:spring-security-oauth2-jose'
 	compile 'org.springframework.security:spring-security-oauth2-resource-server'
+	compile 'io.jsonwebtoken:jjwt:0.8.0'
+
+	//Postgre
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.postgresql:postgresql'
+
 }
