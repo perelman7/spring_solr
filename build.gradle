@@ -27,8 +27,7 @@ dependencies {
 
 	//WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	//compile 'org.springframework.boot:spring-boot-starter-webflux'
-	
+
 	//SOLR
 	compile 'org.springframework.boot:spring-boot-starter-data-solr'
 	compile 'org.apache.solr:solr-solrj'
@@ -44,5 +43,8 @@ dependencies {
 	//Elastic :3.1.9.RELEASE
 	compile 'org.springframework.data:spring-data-elasticsearch'
 
-
+	//Security
+	compile "org.springframework.boot:spring-boot-starter-security"
+	compile 'org.springframework.security:spring-security-oauth2-jose'
+	compile 'org.springframework.security:spring-security-oauth2-resource-server'
 }
